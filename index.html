@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- all seo elements for an online image editor -->
+  <title>Image Editor</title>
+  <meta name="description" content="Edit your image in your way">
+  <meta name="keywords" content="image, editor, online, free, image editor, image editing, image editing tool">
+  <meta name="author" content="Saptarshi Chakraborty">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta name="bingbot" content="index, follow">
+  <meta name="revisit-after" content="7 days">
+
+  <!-- create all social media elements for an online image editor -->
+  <meta property="og:title" content="Image Editor">
+  <meta property="og:description" content="Edit your image in your way">
+  <meta property="og:image" content="image.jpg">
+  <meta property="og:url" content="https://image-editor.netlify.app">
+  <meta property="og:site_name" content="Image Editor">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+
+  <!-- create all twitter elements for an online image editor -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Image Editor">
+  <meta name="twitter:description" content="Edit your image in your way">
+  <meta name="twitter:image" content="image.jpg">
+  <meta name="twitter:site" content="@imageeditor">
+  <meta name="twitter:creator" content="@rahul">
+  <meta name="twitter:url" content="https://image-editor.netlify.app">
+
+  <script defer src="./app.js" type="text/javascript"></script>
+  <link href="./style.css" rel="stylesheet">
+  </link>
+
+  <!-- favicon -->
+  <link rel="icon" href="https://www.magicpattern.design/static/favicons/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <div class="heading">
+    <h1>Image Editor</h1>
+    <p>Edit your image in your way</p>
+  </div>
+
+  <div class="card">
+
+    <!-- create a file input -->
+    <div class="card-body file-input-box" id="file-input-box">
+      <label for="fileInput">Choose an image</label>
+      <!-- <input type="file" id="fileInput" accept="image/*"> -->
+      <input type="file" id="fileInput" onchange="displayImage()">
+    </div>
+
+
+    <div class="card-image d-none" id="card-image-box">
+      <!-- <img id="image" src="image.jpg" alt="Card Image"> -->
+      <img id="image" alt="Image Preview">
+    </div>
+
+    <div id="image-control-box" class="d-none">
+      <div class="card-content">
+
+        <div class="slider-container">
+          <label for="brightness">brightness</label>
+          <input type="range" name="brightness" id="brightness" min="0" max="200" value="100"
+            onchange="changeBrightness()">
+        </div>
+
+        <div class="slider-container">
+          <label for="contrast">contrast</label>
+          <input type="range" name="contrast" id="contrast" min="0" max="200" value="100" onchange="changeContrast()">
+        </div>
+
+        <div class="slider-container">
+          <label for="saturate">saturation</label>
+          <input type="range" name="saturation" id="saturate" min="0" max="200" value="100"
+            onchange="changeSaturation()">
+        </div>
+
+        <div class="slider-container">
+          <label for="sepia">sepia</label>
+          <input type="range" name="sepia" id="sepia" min="0" max="100" value="0" onchange="changeSepia()">
+        </div>
+
+        <div class="slider-container">
+          <button class="button btn-success" onclick="resetImage()">Reset</button>
+          <button class="button btn-danger" onclick="downloadImage()">Download</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- JS File -->
+  <!-- <script src="./app.js" type="text/javascript"></script> -->
+</body>
+
+</html>
